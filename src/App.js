@@ -1,7 +1,10 @@
 import {useState} from 'react';
+import { createElements } from './Functions/main functions';
 import './App.css';
 /* components */
 import {Form} from './components/input-form.js';
+import {listItem} from './components/list-item.js';
+
 function App() {
   const [tasks,setTasks]=useState([]);
   function handleSubmit(e){
@@ -17,28 +20,13 @@ function App() {
     }
     
   };
-  const taskList=tasks.map((task,key)=>{
-   return ( 
-       <li className="task" key={key}>
-        <button className="task-status-button">
-            <i className="fa-solid fa-circle-dot"></i>
-        </button>
-        <div className="task-info" >
-            <div className="task-top">
-                <h4 className="task-heading">{task.taskName}</h4>
-                <div className="action-buttons">
-                   {/*icon-1 and icon-2*/}
-                    <i className="fa-solid fa-trash"></i>
-                    <i className="fa-solid fa-pen-to-square"></i>
-                </div>
-            </div>
-            <div className="date">
-                <div className="date-icon"></div>
-                <div className="date-text">{task.taskDate}</div>
-            </div>
-        </div>
-    </li>)
-  })
+  let taskList=createElements(tasks,handleCheck);
+  function handleCheck(event){
+        console.log(event)
+        //taskList=createElements(tasks)
+    }
+
+
   return (
     <div id="app">
         <div className="app-elements-wrapper">
