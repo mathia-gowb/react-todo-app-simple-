@@ -1,0 +1,93 @@
+
+        ul{
+          list-style:none
+      }
+      *{
+          padding:0;
+          margin:0
+      }
+      :root{
+          --pink-light:#D54B6C;
+          --pink-dark:#D0244D;
+          --purple:#89216B
+      }
+      #app{
+          height:100vh;
+          width:100%;
+          background:linear-gradient(var(--pink-light),var(--purple));
+          display:flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .app-elements-wrapper{
+          width:600px;
+          box-shadow:0 0 40px 0px rgba(0, 0, 0, 0.445)
+      }
+      .top,.tasks-wrapper{
+          padding:20px 40px
+      }
+      .top{
+          background:linear-gradient(to right,var(--pink-dark),var(--pink-light))
+      }
+      .tasks-wrapper{
+          background-color:#252525 ;
+      }
+      button,input{
+          border:none;
+
+      }
+      form{
+          display:flex;
+          align-items: flex-end;
+          justify-content: space-between;
+      }
+      form,form button{
+          color:white;
+      }
+      form input{
+          height:20px;
+          padding:6px;
+          margin-right:5px
+      }
+      form button{
+         
+          height:37px;
+          padding:6px;
+          background-color: var(--purple);
+          width:150px;
+          font-size:10px;
+          font-weight:bold
+      }
+      .complete .task-heading{
+          color:rgb(82, 82, 82);
+          text-decoration:line-through
+      }
+      .action-buttons,.task-status-button{
+          color:var(--purple)
+      }
+      .task-status-button{
+          font-size:25px;
+          padding-right:20px;
+          
+      }
+      .task{
+          background-color: white;
+          padding:15px 20px;
+          border-radius:3px;
+          margin-bottom:5px;
+          display:flex
+      }
+      .task-top{
+          display: flex;
+          justify-content: space-between;
+      }
+      .task-info{
+          width:100%
+      }
+      .date{
+          margin-top:4px
+      
+      }
+      .date-text{
+          color:rgb(51, 51, 51)
+      }
