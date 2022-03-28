@@ -62,6 +62,12 @@
           color:rgb(82, 82, 82);
           text-decoration:line-through
       }
+      .complete .unchecked{
+          display:none;
+      }
+      .not-complete .checked{
+          display:none
+      }
       .action-buttons,.task-status-button{
           color:var(--purple)
       }
